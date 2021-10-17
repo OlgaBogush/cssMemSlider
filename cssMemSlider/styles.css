@@ -77,7 +77,6 @@ article img {
 #active label:hover {
     background: white;
     cursor: pointer;
-    /* border-color: green !important; */
 }
 /* цвет активного кружка */
 #switch1:checked ~ #active label:nth-child(1),
@@ -85,7 +84,6 @@ article img {
 #switch3:checked ~ #active label:nth-child(3),
 #switch4:checked ~ #active label:nth-child(4) {
     background-color: black;
-    /* border-color: green !important; */
     border: 2px solid royalblue;
     transition: border .2s linear;
 }
