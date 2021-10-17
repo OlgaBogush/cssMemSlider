@@ -1,13 +1,7 @@
 * {
     box-sizing: border-box;
 }
-/* .container {
-    width: 1020px;
-    height: 1040px;
-    padding-top: 5px;
-    margin: 0 auto;
-    background-color: black;
-} */
+
 
 #circle {
     position: relative;
