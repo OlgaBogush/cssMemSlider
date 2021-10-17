@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+
+#circle {
+    position: relative;
+    text-align: center;
+    top: 10px;
+    margin: 0 auto;
+    background-color: black;
+    padding: 5px 30px 100px 30px;
+}
+#slides article {
+    width: 20%;
+    float: left;
+}
+#slides .images {
+    width: 500%;
+    line-height: 0;
+}
+#square {
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+
+#rectangle {
+    width: 100%;
+    overflow: hidden;
+}
+article p {
+    width: 100%;
+    text-align: left;
+    font-size: 2em;
+    color: white;
+}
+
+
+article img {
+    width: 100%;
+}
+#desktop:checked ~ #circle {
+    max-width: 960px;
+}
+.all input {
+    display: none;
+}
+
+#switch1:checked ~ #slides .images {
+    margin-left: 0;
+}
+#switch2:checked ~ #slides .images {
+    margin-left: -100%;
+}
+#switch3:checked ~ #slides .images {
+    margin-left: -200%;
+}
+#switch4:checked ~ #slides .images {
+    margin-left: -300%;
+}
+
+#active label {
+    border-radius: 50%;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background: rgb(103, 134, 230);
+    transition: background .2s linear;
+}
+#active {
+    margin: -40px 0 0;
+    text-align: right;
+}
+#active label:hover {
+    background: white;
+    cursor: pointer;
+}
+/* цвет активного кружка */
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3),
+#switch4:checked ~ #active label:nth-child(4) {
+    background-color: black;
+    border: 2px solid rgb(103, 134, 230);
+    transition: border .2s linear;
+}
+#switch1:checked ~ #active label:nth-child(1):hover,
+#switch2:checked ~ #active label:nth-child(2):hover,
+#switch3:checked ~ #active label:nth-child(3):hover,
+#switch4:checked ~ #active label:nth-child(4):hover {
+    border: 2px solid white;
+}
+
+
+
+
+#slides .images {
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+#slides {
+    margin-top: 20px;
+}
+
+
+@media (max-width: 320px) {
+    #active {
+        margin: -45px 0 0;
+        text-align: center;
+    }
+    #slides {
+        margin-top: 25px;
+    }
+    #circle {
+        padding: 4px 15px 80px 15px;
+    }
+    #active label {
+        width: 9px;
+        height: 9px;
+        margin-left: 5px;
+    }
+    article p {
+        font-size: .9em;
+    }
+    
+
+
+}
